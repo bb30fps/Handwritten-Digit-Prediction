@@ -2,7 +2,6 @@
 
 A complete implementation of a Convolutional Neural Network (CNN) for MNIST digit classification with a graphical user interface for real-time predictions. Built with TensorFlow and Tkinter. Ideal for ML education and prototyping.
 
----
 ```markdown
 ## 🚀 Quick Start
 
