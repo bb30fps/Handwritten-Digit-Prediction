@@ -3,8 +3,6 @@
 
 A complete implementation of a Convolutional Neural Network (CNN) for MNIST digit classification with a graphical user interface for real-time predictions. Built with TensorFlow and Tkinter. Ideal for ML education and prototyping.
 
-![GUI Demo](https://via.placeholder.com/600x400?text=GUI+Preview+%7C+Draw+%26+Recognize+Digits) *Example: GUI Interface*
-
 ---
 
 ## 🚀 Quick Start
