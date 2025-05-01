@@ -150,3 +150,5 @@ def create_model():
 3. Commit changes (`git commit -am 'Add new feature'`)
 4. Push to branch (`git push origin feature/improvement`)
 5. Open Pull Request
+
+---
