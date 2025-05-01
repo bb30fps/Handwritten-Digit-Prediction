@@ -26,17 +26,17 @@ A complete implementation of a Convolutional Neural Network (CNN) for MNIST digi
 ## 📥 Installation Guide
 
 ### 1. Clone Repository
-```bash
+
 git clone https://github.com/bb30fps/handwritten-digit-recognizer.git
 cd handwritten-digit-recognizer
 
 2. Create Virtual Environment (Recommended)
-bash
+
 python -m venv venv
 venv\Scripts\activate
 
 3. Install Dependencies
-bash
+
 pip install -r requirements.txt
 
 🚀 Usage Instructions
@@ -64,6 +64,7 @@ logs/training_metrics.png: Accuracy/loss visualization
 logs/logs/: TensorBoard event files
 
 GUI Application:
+
 python gui.py
 
 Interface Components:
@@ -75,44 +76,36 @@ Recognition Result Display
 
 📊 Logging & Model Saving
 
-Automatic Logging: During training, logs are generated via TensorBoard and stored in logs/logs/. These include:
+Automatic Logging: During training, logs are generated via TensorBoard and stored in logs/logs/. 
 
-Training/validation accuracy and loss.
+These include:
 
-Histograms of layer weights.
-
-Model Checkpoints: The best model (based on validation accuracy) is saved to models/my_model.keras.
-
-Final Model: The trained model is saved as models/model.keras after training completes.
-
-Training Metrics: A plot of accuracy and loss curves is saved to logs/training_metrics.png.
+-Training/validation accuracy and loss.
+-Histograms of layer weights.
+-Model Checkpoints: The best model (based on validation accuracy) is saved to models/my_model.keras.
+-Final Model: The trained model is saved as models/model.keras after training completes.
+-Training Metrics: A plot of accuracy and loss curves is saved to logs/training_metrics.png.
 
 TensorBoard Integration:
 
-Track metrics in real-time:
-
-bash
-tensorboard --logdir logs/logs
-
+-Track metrics in real-time
+-tensorboard --logdir logs/logs
 Access at http://localhost:6006
-
-Training Visualization
-Training Metrics
 
 🖥️ GUI Operation:
 
-Workflow
+Workflow:
 
-Draw digit using mouse/touchpad
-Click "Recognize"
-System displays predicted digit and confidence
-Click "Clear" to reset
-Image Preprocessing Pipeline
-Capture canvas area
-Convert to grayscale
-Resize to 28x28 pixels
-Invert colors (MNIST-compatible format)
-Normalize pixel values [0, 1]
+-Draw digit using mouse/touchpad
+-Click "Recognize"
+-System displays predicted digit and confidence
+-Click "Clear" to reset
+-Image Preprocessing Pipeline
+-Capture canvas area
+-Convert to grayscale
+-Resize to 28x28 pixels
+-Invert colors (MNIST-compatible format)
+-Normalize pixel values [0, 1]
 
 📂 Project Structure
 .
@@ -128,6 +121,7 @@ Normalize pixel values [0, 1]
 └── README.md
 
 🛠 Troubleshooting
+
 Issue: Model not found at models/model.keras
 Solution: Run train.py first to generate model files
 
@@ -135,17 +129,14 @@ Issue: Dependency conflicts
 Solution: Use virtual environment and ensure correct Python version
 
 Issue: Low prediction accuracy
+
 Solution:
-
-Draw centered, clear digits
-
-Ensure proper inversion in preprocessing
-
-Retrain with more epochs
+-Draw centered, clear digits
+-Ensure proper inversion in preprocessing
+-Retrain with more epochs
 
 Issue: TensorFlow GPU errors
 Solution: Install CPU-only version:
 
-bash
 pip uninstall tensorflow
 pip install tensorflow-cpu
