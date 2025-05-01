@@ -1,66 +1,183 @@
 # Handwritten Digit Recognition System
 
-A GUI-based application that recognizes handwritten digits using a Convolutional Neural Network (CNN) trained on the MNIST dataset. Built with TensorFlow for the machine learning model and Tkinter for the graphical interface.
+A complete implementation of a Convolutional Neural Network (CNN) for MNIST digit classification with a graphical user interface for real-time predictions. Built with TensorFlow and Tkinter.
 
 ---
 
-## ✨ Features
-- **Real-time Prediction**: Draw a digit on the canvas and get instant predictions.
-- **CNN Model**: A trained deep learning model with **~99% test accuracy**.
-- **User-Friendly GUI**: Clear canvas functionality and confidence score display.
-- **Training Metrics**: Visualization of training/validation accuracy and loss.
+## 📋 Table of Contents
+- [Project Overview](#-project-overview)
+- [System Requirements](#-system-requirements)
+- [Installation Guide](#-installation-guide)
+- [Usage Instructions](#-usage-instructions)
+- [Training Process & Logging](#-training-process--logging)
+- [GUI Operation](#-gui-operation)
+- [Project Structure](#-project-structure)
+- [Troubleshooting](#-troubleshooting)
+- [License](#-license)
 
 ---
 
-## 🛠 Installation
+## 🌟 Project Overview
 
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/your-username/digit-recognizer.git
-   cd digit-recognizer
-Install Dependencies:
+### Model Architecture
+- **CNN Structure**:
+  - 2 Conv2D layers (32 and 64 filters)
+  - 2 MaxPooling layers
+  - 2 Dense layers (128 and 64 units) with Dropout
+  - Adam optimizer (0.001 learning rate)
+  - Categorical crossentropy loss
+- **Performance**: Achieves ~99% test accuracy on MNIST dataset
 
+### GUI Features
+- Interactive canvas for digit drawing
+- Real-time prediction with confidence score
+- Image preprocessing pipeline (28x28 grayscale conversion)
+- Clear canvas functionality
+
+---
+
+## 💻 System Requirements
+- Python 3.8+
+- 4GB RAM minimum
+- 500MB Disk space
+- pip package manager
+- (Optional) NVIDIA GPU for accelerated training
+
+---
+
+## 📥 Installation Guide
+
+### 1. Clone Repository
+```bash
+git clone https://github.com/bb30fps/handwritten-digit-recognizer.git
+cd handwritten-digit-recognizer
+2. Create Virtual Environment (Recommended)
 bash
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/your-username/handwritten-digit-recognizer.git
-   cd handwritten-digit-recognizer
-Install Dependencies:
-
+python -m venv venv
+source venv/bin/activate  # Linux/macOS
+venv\Scripts\activate     # Windows
+3. Install Dependencies
 bash
 pip install -r requirements.txt
-Train the Model (Required for First-Time Use):
-
+🚀 Usage Instructions
+Model Training
 bash
-python train.py --epochs 15 --batch_size 128
-This generates the model file (models/model.keras) and training logs.
+python train.py \
+  --epochs 15 \
+  --batch_size 128 \
+  --model_dir models \
+  --log_dir logs
+Arguments:
 
-Skip this step if using a pre-trained model.
+--epochs: Number of training iterations (default: 15)
 
-Launch the GUI Application:
+--batch_size: Samples per gradient update (default: 128)
 
+--model_dir: Output directory for model checkpoints
+
+--log_dir: Directory for training logs and metrics
+
+Output Files:
+
+models/my_model.keras: Best model during training
+
+models/model.keras: Final trained model
+
+logs/training_metrics.png: Accuracy/loss visualization
+
+logs/logs/: TensorBoard event files
+
+GUI Application
 bash
 python gui.py
-Draw a digit on the canvas and click Recognize for predictions.
+Interface Components:
+
+Drawing Canvas (300x300 pixels)
+
+Recognition Result Display
+
+"Recognize" Button: Trigger prediction
+
+"Clear" Button: Reset canvas
+
+📊 Training Process & Logging
+Callback System
+Model Checkpointing:
+
+Saves best model based on validation accuracy
+
+Location: models/my_model.keras
+
+Early Stopping:
+
+Monitors validation loss
+
+Stops training if no improvement for 3 epochs
+
+TensorBoard Integration:
+
+Track metrics in real-time:
+
+bash
+tensorboard --logdir logs/logs
+Access at http://localhost:6006
+
+Training Visualization
+Training Metrics
+
+🖥️ GUI Operation
+Workflow
+Draw digit using mouse/touchpad
+
+Click "Recognize"
+
+System displays predicted digit and confidence
+
+Click "Clear" to reset
+
+Image Preprocessing Pipeline
+Capture canvas area
+
+Convert to grayscale
+
+Resize to 28x28 pixels
+
+Invert colors (MNIST-compatible format)
+
+Normalize pixel values [0, 1]
 
 📂 Project Structure
 .
-├── models/             # Saved model checkpoints
-├── logs/               # Training logs and metrics
-├── gui.py              # GUI application code
-├── train.py            # Model training script
-├── requirements.txt    # Dependencies
+├── models/               # Saved models
+│   ├── model.keras      # Final trained model
+│   └── my_model.keras   # Best validation model
+├── logs/                # Training artifacts
+│   ├── logs/            # TensorBoard logs
+│   └── training_metrics.png
+├── gui.py               # GUI application
+├── train.py             # Model training script
+├── requirements.txt     # Dependency list
 └── README.md
 
-📊 Logging & Model Saving
-Automatic Logging: During training, logs are generated via TensorBoard and stored in logs/logs/. These include:
+🛠 Troubleshooting
+Issue: Model not found at models/model.keras
+Solution: Run train.py first to generate model files
 
-Training/validation accuracy and loss.
+Issue: Dependency conflicts
+Solution: Use virtual environment and ensure correct Python version
 
-Histograms of layer weights.
+Issue: Low prediction accuracy
+Solution:
 
-Model Checkpoints: The best model (based on validation accuracy) is saved to models/my_model.keras.
+Draw centered, clear digits
 
-Final Model: The trained model is saved as models/model.keras after training completes.
+Ensure proper inversion in preprocessing
 
-Training Metrics: A plot of accuracy and loss curves is saved to logs/training_metrics.png.
+Retrain with more epochs
+
+Issue: TensorFlow GPU errors
+Solution: Install CPU-only version:
+
+bash
+pip uninstall tensorflow
+pip install tensorflow-cpu
