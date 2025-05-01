@@ -43,8 +43,6 @@ bash
 python gui.py
 Draw a digit on the canvas and click Recognize for predictions.
 
-
-
 📂 Project Structure
 .
 ├── models/             # Saved model checkpoints
