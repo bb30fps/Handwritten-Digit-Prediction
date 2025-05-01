@@ -49,34 +49,25 @@ python train.py \
 Arguments:
 
 --epochs: Number of training iterations (default: 15)
-
 --batch_size: Samples per gradient update (default: 128)
-
 --model_dir: Output directory for model checkpoints
-
 --log_dir: Directory for training logs and metrics
 
 Output Files:
 
 models/my_model.keras: Best model during training
-
 models/model.keras: Final trained model
-
 logs/training_metrics.png: Accuracy/loss visualization
-
 logs/logs/: TensorBoard event files
 
-GUI Application
-bash
+GUI Application:
 python gui.py
+
 Interface Components:
 
 Drawing Canvas (300x300 pixels)
-
 Recognition Result Display
-
 "Recognize" Button: Trigger prediction
-
 "Clear" Button: Reset canvas
 
 📊 Logging & Model Saving
