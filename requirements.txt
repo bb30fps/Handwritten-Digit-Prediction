@@ -1,0 +1,7 @@
+tensorflow
+pillow
+numpy
+pywin32
+screeninfo
+scipy
+matplotlib
