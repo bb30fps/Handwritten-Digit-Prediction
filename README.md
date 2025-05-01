@@ -22,8 +22,6 @@ python train.py --epochs 15
 python gui.py
 ```
 ```markdown
----
-
 ## ✨ Key Features
 
 | Component         | Highlights                                                                 |
