@@ -4,19 +4,6 @@ A complete implementation of a Convolutional Neural Network (CNN) for MNIST digi
 
 ---
 
-## 📋 Table of Contents
-- [Project Overview](#-project-overview)
-- [System Requirements](#-system-requirements)
-- [Installation Guide](#-installation-guide)
-- [Usage Instructions](#-usage-instructions)
-- [Training Process & Logging](#-training-process--logging)
-- [GUI Operation](#-gui-operation)
-- [Project Structure](#-project-structure)
-- [Troubleshooting](#-troubleshooting)
-- [License](#-license)
-
----
-
 ## 🌟 Project Overview
 
 ### Model Architecture
