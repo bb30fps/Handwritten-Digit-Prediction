@@ -3,21 +3,21 @@
 A complete implementation of a Convolutional Neural Network (CNN) for MNIST digit classification with a graphical user interface for real-time predictions. Built with TensorFlow and Tkinter. Ideal for ML education and prototyping.
 
 ```markdown
-## 🚀 Quick Start
+🚀 Quick Start
 
-### 1. Clone & Install
+1. Clone & Install
 ```bash
 git clone https://github.com/bb30fps/handwritten-digit-recognizer.git
 cd handwritten-digit-recognizer
 pip install -r requirements.txt
 ```
 
-### 2. Train Model (First-Time Setup)
+2. Train Model (First-Time Setup)
 ```bash
 python train.py --epochs 15
 ```
 
-### 3. Launch GUI
+3. Launch GUI
 ```bash
 python gui.py
 ```
