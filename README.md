@@ -29,15 +29,18 @@ A complete implementation of a Convolutional Neural Network (CNN) for MNIST digi
 ```bash
 git clone https://github.com/bb30fps/handwritten-digit-recognizer.git
 cd handwritten-digit-recognizer
+
 2. Create Virtual Environment (Recommended)
 bash
 python -m venv venv
 venv\Scripts\activate
+
 3. Install Dependencies
 bash
 pip install -r requirements.txt
 
 🚀 Usage Instructions
+
 Model Training
 bash
 python train.py \
@@ -71,6 +74,7 @@ Recognition Result Display
 "Clear" Button: Reset canvas
 
 📊 Logging & Model Saving
+
 Automatic Logging: During training, logs are generated via TensorBoard and stored in logs/logs/. These include:
 
 Training/validation accuracy and loss.
@@ -89,6 +93,7 @@ Track metrics in real-time:
 
 bash
 tensorboard --logdir logs/logs
+
 Access at http://localhost:6006
 
 Training Visualization
