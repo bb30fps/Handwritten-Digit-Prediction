@@ -89,7 +89,8 @@ Sequential(
 | Early Stopping  | 3 epochs| Patience for validation loss         |
 
 
-🖌️ GUI Usage Guide
+
+##🖌️ GUI Usage Guide
 
 1. **Drawing Tips**
    - Use mouse/touchpad to draw digits
@@ -107,9 +108,9 @@ Sequential(
 3. **Preprocessing Steps**
    - Canvas capture → Grayscale → 28x28 resize → Color inversion → Normalization
 
----
 
-🛠️ Troubleshooting
+
+##🛠️ Troubleshooting
 
 Common Issues
 
@@ -130,7 +131,6 @@ def create_model():
     ])
 ```
 
----
 
 🤝 Contributing
 
@@ -140,4 +140,3 @@ def create_model():
 4. Push to branch (`git push origin feature/improvement`)
 5. Open Pull Request
 
----
