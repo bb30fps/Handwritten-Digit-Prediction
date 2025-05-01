@@ -23,15 +23,6 @@ A complete implementation of a Convolutional Neural Network (CNN) for MNIST digi
 
 ---
 
-## 💻 System Requirements
-- Python 3.8+
-- 4GB RAM minimum
-- 500MB Disk space
-- pip package manager
-- (Optional) NVIDIA GPU for accelerated training
-
----
-
 ## 📥 Installation Guide
 
 ### 1. Clone Repository
@@ -41,11 +32,11 @@ cd handwritten-digit-recognizer
 2. Create Virtual Environment (Recommended)
 bash
 python -m venv venv
-source venv/bin/activate  # Linux/macOS
-venv\Scripts\activate     # Windows
+venv\Scripts\activate
 3. Install Dependencies
 bash
 pip install -r requirements.txt
+
 🚀 Usage Instructions
 Model Training
 bash
@@ -54,6 +45,7 @@ python train.py \
   --batch_size 128 \
   --model_dir models \
   --log_dir logs
+
 Arguments:
 
 --epochs: Number of training iterations (default: 15)
@@ -87,19 +79,18 @@ Recognition Result Display
 
 "Clear" Button: Reset canvas
 
-📊 Training Process & Logging
-Callback System
-Model Checkpointing:
+📊 Logging & Model Saving
+Automatic Logging: During training, logs are generated via TensorBoard and stored in logs/logs/. These include:
 
-Saves best model based on validation accuracy
+Training/validation accuracy and loss.
 
-Location: models/my_model.keras
+Histograms of layer weights.
 
-Early Stopping:
+Model Checkpoints: The best model (based on validation accuracy) is saved to models/my_model.keras.
 
-Monitors validation loss
+Final Model: The trained model is saved as models/model.keras after training completes.
 
-Stops training if no improvement for 3 epochs
+Training Metrics: A plot of accuracy and loss curves is saved to logs/training_metrics.png.
 
 TensorBoard Integration:
 
