@@ -22,7 +22,6 @@ python train.py --epochs 15
 python gui.py
 ```
 
----
 
 ## ✨ Key Features
 
@@ -33,7 +32,6 @@ python gui.py
 | **Training Suite**| Automatic model checkpointing, TensorBoard integration, metrics visualization |
 | **Preprocessing** | Auto-inversion, normalization, and resizing for MNIST compatibility       |
 
----
 
 ## 📂 Project Structure
 
@@ -49,8 +47,6 @@ digit-recognizer/
 ├── train.py             # Model training script
 └── requirements.txt     # Dependency specifications
 ```
-
----
 
 ## 🧠 Model Architecture
 
@@ -68,8 +64,6 @@ Sequential(
     Dense(10, activation='softmax')
 )
 ```
-
----
 
 ## 📊 Training & Logging
 
@@ -94,9 +88,8 @@ Sequential(
 | Base Learning Rate | 0.001 | Adam optimizer initial rate          |
 | Early Stopping  | 3 epochs| Patience for validation loss         |
 
----
 
-## 🖌️ GUI Usage Guide
+🖌️ GUI Usage Guide
 
 1. **Drawing Tips**
    - Use mouse/touchpad to draw digits
@@ -116,9 +109,9 @@ Sequential(
 
 ---
 
-## 🛠️ Troubleshooting
+🛠️ Troubleshooting
 
-### Common Issues
+Common Issues
 
 | Symptom                          | Solution                                  |
 |----------------------------------|-------------------------------------------|
@@ -127,7 +120,7 @@ Sequential(
 | TensorFlow GPU errors            | Install CPU-only version with `tensorflow-cpu` |
 | Dependency conflicts             | Use virtual environment                   |
 
-### Advanced Configuration
+Advanced Configuration
 ```python
 # To modify model architecture (train.py)
 def create_model():
@@ -139,7 +132,7 @@ def create_model():
 
 ---
 
-## 🤝 Contributing
+🤝 Contributing
 
 1. Fork the repository
 2. Create feature branch (`git checkout -b feature/improvement`)
