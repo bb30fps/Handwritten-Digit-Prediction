@@ -94,25 +94,19 @@ Access at http://localhost:6006
 Training Visualization
 Training Metrics
 
-🖥️ GUI Operation
+🖥️ GUI Operation:
+
 Workflow
+
 Draw digit using mouse/touchpad
-
 Click "Recognize"
-
 System displays predicted digit and confidence
-
 Click "Clear" to reset
-
 Image Preprocessing Pipeline
 Capture canvas area
-
 Convert to grayscale
-
 Resize to 28x28 pixels
-
 Invert colors (MNIST-compatible format)
-
 Normalize pixel values [0, 1]
 
 📂 Project Structure
