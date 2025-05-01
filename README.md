@@ -148,6 +148,6 @@ def create_model():
 --- 
 
 ## 📧 Contact
-Project Maintainer
+Project Maintainer:
 Bishal Raj Basumatary
 Email - bishal.rajbb@gmail.com
