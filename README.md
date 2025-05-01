@@ -1,27 +1,28 @@
-# Handwritten Digit Recognition System 🔢
+# Handwritten Digit Recognition System
 
 A complete implementation of a Convolutional Neural Network (CNN) for MNIST digit classification with a graphical user interface for real-time predictions. Built with TensorFlow and Tkinter. Ideal for ML education and prototyping.
 
 ```markdown
-🚀 Quick Start
+## 🚀 Quick Start
 
-1. Clone & Install
+### 1. Clone & Install
 ```bash
 git clone https://github.com/bb30fps/handwritten-digit-recognizer.git
 cd handwritten-digit-recognizer
 pip install -r requirements.txt
 ```
 
-2. Train Model (First-Time Setup)
+### 2. Train Model (First-Time Setup)
 ```bash
 python train.py --epochs 15
 ```
 
-3. Launch GUI
+### 3. Launch GUI
 ```bash
 python gui.py
 ```
 
+---
 
 ## ✨ Key Features
 
@@ -32,6 +33,7 @@ python gui.py
 | **Training Suite**| Automatic model checkpointing, TensorBoard integration, metrics visualization |
 | **Preprocessing** | Auto-inversion, normalization, and resizing for MNIST compatibility       |
 
+---
 
 ## 📂 Project Structure
 
@@ -47,6 +49,8 @@ digit-recognizer/
 ├── train.py             # Model training script
 └── requirements.txt     # Dependency specifications
 ```
+
+---
 
 ## 🧠 Model Architecture
 
@@ -64,6 +68,8 @@ Sequential(
     Dense(10, activation='softmax')
 )
 ```
+
+---
 
 ## 📊 Training & Logging
 
@@ -88,9 +94,9 @@ Sequential(
 | Base Learning Rate | 0.001 | Adam optimizer initial rate          |
 | Early Stopping  | 3 epochs| Patience for validation loss         |
 
+---
 
-
-##🖌️ GUI Usage Guide
+## 🖌️ GUI Usage Guide
 
 1. **Drawing Tips**
    - Use mouse/touchpad to draw digits
@@ -108,11 +114,11 @@ Sequential(
 3. **Preprocessing Steps**
    - Canvas capture → Grayscale → 28x28 resize → Color inversion → Normalization
 
+---
 
+## 🛠️ Troubleshooting
 
-##🛠️ Troubleshooting
-
-Common Issues
+### Common Issues
 
 | Symptom                          | Solution                                  |
 |----------------------------------|-------------------------------------------|
@@ -121,7 +127,7 @@ Common Issues
 | TensorFlow GPU errors            | Install CPU-only version with `tensorflow-cpu` |
 | Dependency conflicts             | Use virtual environment                   |
 
-Advanced Configuration
+### Advanced Configuration
 ```python
 # To modify model architecture (train.py)
 def create_model():
@@ -131,12 +137,12 @@ def create_model():
     ])
 ```
 
+---
 
-🤝 Contributing
+## 🤝 Contributing
 
 1. Fork the repository
 2. Create feature branch (`git checkout -b feature/improvement`)
 3. Commit changes (`git commit -am 'Add new feature'`)
 4. Push to branch (`git push origin feature/improvement`)
 5. Open Pull Request
-
