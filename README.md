@@ -5,7 +5,7 @@ A complete implementation of a Convolutional Neural Network (CNN) for MNIST digi
 ---
 
 ### 1. Clone & Install
-```bash
+
 git clone https://github.com/bb30fps/handwritten-digit-recognizer.git
 cd handwritten-digit-recognizer
 
