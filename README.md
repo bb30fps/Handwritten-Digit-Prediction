@@ -37,12 +37,12 @@ python gui.py
 
 ```plaintext
 digit-recognizer/
-├── models/               # Saved models
+├── models/              # Saved models
 │   ├── model.keras      # Production model
 │   └── my_model.keras   # Best validation model
 ├── logs/                # Training artifacts
-│   ├── metrics/         # Accuracy/loss plots
-│   └── tensorboard/     # Training logs for visualization
+│   ├── train/           # Accuracy/loss plots
+│   └── validation/      # Training logs for visualization
 ├── gui.py               # Graphical interface
 ├── train.py             # Model training script
 └── requirements.txt     # Dependency specifications
