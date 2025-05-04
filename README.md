@@ -149,5 +149,5 @@ def create_model():
 
 ## 📧 Contact
 Project Maintainer:
-Bishal Raj Basumatary
+BAKI
 Email - bishal.rajbb@gmail.com
